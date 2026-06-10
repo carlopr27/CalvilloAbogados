@@ -3,62 +3,130 @@
 <head>
   <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"/>
   <title>Contacto · Calvillo Abogados</title>
+  <meta name="description" content="Leibnitz 117 Piso 3, Col. Verónica Anzúrez, CDMX. contacto@calvilloabogados.com"/>
+  <link rel="icon" href="https://calvilloabogados.com/img/logo.png"/>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/css/bootstrap.min.css" rel="stylesheet"/>
   <link rel="stylesheet" href="style.css"/>
   <style>
     .banner_area{background-image:url('https://images.unsplash.com/photo-1747620612231-c598ff8abc65?w=1600&auto=format&fit=crop&q=80')}
     .contact-section{padding:80px 0;background:#fff}
-    .map-wrap{margin-bottom:60px}
+    .map-wrap{margin-bottom:64px}
     .map-wrap iframe{width:100%;height:440px;border:0;display:block}
-    .info-label{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#aaa;font-weight:700;margin-bottom:8px}
+    .info-label{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#aaa;font-weight:700;margin-bottom:8px}
     .info-value{font-size:15px;color:#333;line-height:1.75}
-    .info-value a{color:#333}.info-value a:hover{color:#000}
-    .wa-btn{display:inline-flex;align-items:center;gap:10px;background:#25d366;color:#fff;padding:12px 24px;font-size:13px;font-weight:700;margin-top:16px;transition:opacity .2s}
+    .info-value a{color:#333;transition:color .2s}.info-value a:hover{color:var(--black)}
+    .wa-btn{display:inline-flex;align-items:center;gap:10px;background:#25d366;color:#fff;padding:12px 24px;font-size:13px;font-weight:700;margin-top:12px;transition:opacity .2s}
     .wa-btn:hover{opacity:.88;color:#fff}
-    .info-block{padding:0 0 28px;border-bottom:1px solid var(--border);margin-bottom:28px}
-    .info-block:last-child{border-bottom:none;padding-bottom:0;margin-bottom:0}
+    .info-block{padding-bottom:28px;border-bottom:1px solid var(--border);margin-bottom:28px}
+    .info-block:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+    /* Form */
+    .contact-form-wrap{background:var(--light);padding:40px 36px}
+    .form-h{font-size:18px;color:var(--black);margin-bottom:24px}
+    .cf-group{margin-bottom:18px}
+    .cf-group label{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--black);font-weight:700;display:block;margin-bottom:6px}
+    .cf-group input,.cf-group textarea{width:100%;border:1px solid var(--border);padding:11px 14px;font-family:'Lato',sans-serif;font-size:14px;color:var(--black);background:var(--white);outline:none;border-radius:0;transition:border-color .2s}
+    .cf-group input:focus,.cf-group textarea:focus{border-color:var(--black)}
+    .cf-group textarea{min-height:120px;resize:vertical}
+    .cf-submit{background:var(--black);color:#fff;border:none;padding:13px 32px;font-family:'Lato',sans-serif;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;transition:background .2s;width:100%}
+    .cf-submit:hover{background:#333}
+    .cf-msg{font-size:13px;padding:12px 16px;margin-top:12px;display:none}
+    .cf-msg.ok{background:#e8f5e9;color:#2e7d32;border-left:3px solid #4caf50}
+    .cf-msg.err{background:#fce4ec;color:#c62828;border-left:3px solid #ef5350}
   </style>
 </head>
 <body>
-  <header class="header_area sticky"><nav class="navbar navbar-expand-lg"><div class="container"><a class="navbar-brand" href="index.html"><img class="logo-standard" src="https://calvilloabogados.com/img/logo.png" alt="Calvillo Abogados"/></a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><div class="collapse navbar-collapse" id="nav"><ul class="nav navbar-nav ml-auto"><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="service.html" data-toggle="dropdown">Servicios <span class="caret"></span></a><div class="dropdown-menu"><a class="dropdown-item" href="service.html#litigio-mercantil">Litigio Mercantil</a><a class="dropdown-item" href="service.html#litigio-civil">Litigio Civil</a><a class="dropdown-item" href="service.html#arbitraje">Arbitraje Comercial</a><a class="dropdown-item" href="service.html#corporativo">Corporativo y M&amp;A</a></div></li><li class="nav-item"><a class="nav-link" href="noticias.html">Publicaciones y Noticias</a></li><li class="nav-item"><a class="nav-link" href="clientes.html">Clientes</a></li><li class="nav-item"><a class="nav-link" href="socios.html">Equipo</a></li><li class="nav-item"><a class="nav-link" href="contact.html">Contacto</a></li></ul></div></div></nav></header>
+  <header class="header_area sticky"><nav class="navbar navbar-expand-lg"><div class="container">
+    <a class="navbar-brand" href="index.html"><img class="logo-standard" src="https://calvilloabogados.com/img/logo.png" alt=""/></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+    <div class="collapse navbar-collapse" id="nav"><ul class="nav navbar-nav ml-auto">
+      <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="service.html" data-toggle="dropdown"><span data-i18n="nav_services">Servicios</span></a><div class="dropdown-menu"><a class="dropdown-item" href="service.html#litigio-mercantil" data-i18n="nav_mercantil">Litigio Mercantil</a><a class="dropdown-item" href="service.html#litigio-civil" data-i18n="nav_civil">Litigio Civil</a><a class="dropdown-item" href="service.html#arbitraje" data-i18n="nav_arbitraje">Arbitraje</a><a class="dropdown-item" href="service.html#corporativo" data-i18n="nav_corporativo">Corporativo</a></div></li>
+      <li class="nav-item"><a class="nav-link" href="noticias.html" data-i18n="nav_news">Publicaciones</a></li>
+      <li class="nav-item"><a class="nav-link" href="clientes.html" data-i18n="nav_clients">Clientes</a></li>
+      <li class="nav-item"><a class="nav-link" href="socios.html" data-i18n="nav_team">Equipo</a></li>
+      <li class="nav-item"><a class="nav-link" href="contact.html" data-i18n="nav_contact">Contacto</a></li>
+      <li class="nav-item"><a class="nav-link nav-cta" href="contact.html" data-i18n="nav_cta">Agendar Consulta</a></li>
+    </ul>
+    <button class="lang-toggle" id="lang-toggle" onclick="caSetLang(localStorage.getItem('ca_lang')==='en'?'es':'en')">EN</button>
+    </div>
+  </div></nav></header>
   <div class="spacer-nav"></div>
-  <div class="banner_area"><div class="banner_inner"><h4>Contacto</h4></div></div>
+  <div class="banner_area"><div class="banner_inner"><h4 data-i18n="cnt_banner">Contacto</h4></div></div>
+
   <section class="contact-section">
     <div class="container">
       <div class="map-wrap reveal">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.605920486986!2d-99.18070782502588!3d19.429425781849254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff4d6674d149%3A0x9b5314728420872d!2zTGVpYm5pdHogMTE3LCBBbnp1cmVzLCBNaWd1ZWwgSGlkYWxnbywgMTE1OTAg0KHQsNC9INCc0LjQs9C10LvRjCwgQ0RNWA!5e0!3m2!1ses-419!2smx!4v1692309570820!5m2!1ses-419!2smx" allowfullscreen="" loading="lazy" title="Ubicación Calvillo Abogados"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.605920486986!2d-99.18070782502588!3d19.429425781849254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff4d6674d149%3A0x9b5314728420872d!2zTGVpYm5pdHogMTE3LCBBbnp1cmVzLCBNaWd1ZWwgSGlkYWxnbywgMTE1OTAg0KHQsNC9INCc0LjQs9C10LvRjCwgQ0RNWA!5e0!3m2!1ses-419!2smx!4v1692309570820!5m2!1ses-419!2smx" allowfullscreen="" loading="lazy" title="Calvillo Abogados"></iframe>
       </div>
-      <div class="row justify-content-center">
-        <div class="col-lg-10">
-          <div class="row reveal">
-            <div class="col-md-4">
-              <div class="info-block">
-                <p class="info-label">Dirección</p>
-                <p class="info-value">Leibnitz 117 - Piso 3<br/>Col. Verónica Anzúrez<br/>Alcaldía Miguel Hidalgo<br/>C.P. 11300, CDMX</p>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="info-block">
-                <p class="info-label">Correo Electrónico</p>
-                <p class="info-value"><a href="mailto:contacto@calvilloabogados.com">contacto@calvilloabogados.com</a><br/><a href="mailto:rcalvillo@calvilloabogados.com">rcalvillo@calvilloabogados.com</a></p>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="info-block">
-                <p class="info-label">WhatsApp</p>
-                <a class="wa-btn" href="https://wa.me/5215500000000" target="_blank">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                  Escríbenos
-                </a>
-              </div>
-            </div>
+      <div class="row">
+        <!-- INFO -->
+        <div class="col-md-5 reveal">
+          <div class="info-block">
+            <p class="info-label" data-i18n="cnt_address">Dirección</p>
+            <p class="info-value">Leibnitz 117 - Piso 3<br/>Col. Verónica Anzúrez<br/>Alcaldía Miguel Hidalgo, C.P. 11300<br/>Ciudad de México</p>
           </div>
+          <div class="info-block">
+            <p class="info-label" data-i18n="cnt_email">Correo Electrónico</p>
+            <p class="info-value">
+              <a href="mailto:contacto@calvilloabogados.com">contacto@calvilloabogados.com</a><br/>
+              <a href="mailto:rcalvillo@calvilloabogados.com">rcalvillo@calvilloabogados.com</a>
+            </p>
+          </div>
+          <div class="info-block">
+            <p class="info-label" data-i18n="cnt_wa">WhatsApp</p>
+            <a class="wa-btn" href="https://wa.me/5215500000000" target="_blank">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              <span data-i18n="cnt_wa_btn">Escríbenos</span>
+            </a>
+          </div>
+        </div>
+        <!-- FORM -->
+        <div class="col-md-7 reveal" style="transition-delay:.1s">
+          <div class="contact-form-wrap">
+            <h3 class="form-h" data-i18n="cnt_form_h">Envíanos un mensaje</h3>
+            <!-- Replace FORM_ID with your Formspree form ID from formspree.io -->
+            <form id="contact-form" action="https://formspree.io/f/FORM_ID" method="POST">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="cf-group"><label data-i18n="cnt_name">Nombre completo</label><input type="text" name="nombre" required data-i18n-ph="cnt_name" placeholder="Nombre completo"/></div>
+                </div>
+                <div class="col-md-6">
+                  <div class="cf-group"><label data-i18n="cnt_email">Correo</label><input type="email" name="_replyto" required data-i18n-ph="cnt_email_ph" placeholder="tu@correo.com"/></div>
+                </div>
+              </div>
+              <div class="cf-group"><label data-i18n="cnt_subject">Asunto</label><input type="text" name="asunto" data-i18n-ph="cnt_subject_ph" placeholder="¿En qué podemos ayudarte?"/></div>
+              <div class="cf-group"><label data-i18n="cnt_msg">Mensaje</label><textarea name="mensaje" required data-i18n-ph="cnt_msg_ph" placeholder="Cuéntanos brevemente sobre tu caso..."></textarea></div>
+              <input type="hidden" name="_subject" value="Nuevo contacto - Calvillo Abogados"/>
+              <button type="submit" class="cf-submit" data-i18n="cnt_send">Enviar Mensaje</button>
+            </form>
+            <div class="cf-msg ok" id="cf-ok" data-i18n="cnt_success">Mensaje enviado. Nos pondremos en contacto en breve.</div>
+            <div class="cf-msg err" id="cf-err" data-i18n="cnt_error">Algo salió mal. Escríbenos directamente.</div>
+          </div>
+          <p style="font-size:11px;color:#aaa;margin-top:12px;line-height:1.5;">
+            ⚙️ Para activar el formulario: crea una cuenta gratuita en <a href="https://formspree.io" target="_blank" style="color:#aaa">formspree.io</a>, crea un nuevo form y reemplaza <code>FORM_ID</code> en el archivo contact.html con tu ID.
+          </p>
         </div>
       </div>
     </div>
   </section>
-  <footer class="footer-area"><div class="container"><div class="row"><div class="col-lg-4 mb-4"><img class="footer-logo" src="https://calvilloabogados.com/img/logo.png" alt=""/><p class="footer-tagline">Soluciones sofisticadas<br/>para problemas complejos.</p></div><div class="col-lg-4 mb-4"><p class="footer-heading">Navegación</p><ul class="footer-links"><li><a href="service.html">Servicios</a></li><li><a href="noticias.html">Publicaciones</a></li><li><a href="clientes.html">Clientes</a></li><li><a href="socios.html">Equipo</a></li><li><a href="contact.html">Contacto</a></li></ul></div><div class="col-lg-4 mb-4"><p class="footer-heading">Contacto</p><div class="footer-contact"><p>Leibnitz 117 - Piso 3<br/>Col. Verónica Anzúrez, CDMX</p><p style="margin-top:10px"><a href="mailto:contacto@calvilloabogados.com">contacto@calvilloabogados.com</a></p></div></div></div></div><div class="footer-bottom"><div class="container"><p>Copyright &copy; <script>document.write(new Date().getFullYear())</script> All rights reserved | Calvillo Abogados</p></div></div></footer>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/js/bootstrap.bundle.min.js"></script>
-  <script>const o=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');o.unobserve(x.target)}})},{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>o.observe(el));</script>
-</body>
-</html>
+
+  <footer class="footer-area"><div class="container"><div class="row"><div class="col-lg-4 mb-4"><img class="footer-logo" src="https://calvilloabogados.com/img/logo.png" alt=""/><p class="footer-tagline" data-i18n="footer_tagline"></p></div><div class="col-lg-4 mb-4"><p class="footer-heading" data-i18n="footer_nav">Navegación</p><ul class="footer-links"><li><a href="service.html" data-i18n="nav_services">Servicios</a></li><li><a href="noticias.html" data-i18n="nav_news">Publicaciones</a></li><li><a href="clientes.html" data-i18n="nav_clients">Clientes</a></li><li><a href="socios.html" data-i18n="nav_team">Equipo</a></li><li><a href="contact.html" data-i18n="nav_contact">Contacto</a></li></ul></div><div class="col-lg-4 mb-4"><p class="footer-heading" data-i18n="footer_contact">Contacto</p><div class="footer-contact"><p>Leibnitz 117 - Piso 3<br/>Col. Verónica Anzúrez, CDMX</p><p style="margin-top:10px"><a href="mailto:contacto@calvilloabogados.com">contacto@calvilloabogados.com</a></p></div></div></div></div><div class="footer-bottom"><div class="container"><p>Copyright &copy; <script>document.write(new Date().getFullYear())</script> <span data-i18n="footer_copy"></span></p></div></div></footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/js/bootstrap.bundle.min.js"></script>
+  <script src="i18n.js"></script>
+  <script>
+    const o=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');o.unobserve(x.target)}})},{threshold:.1});
+    document.querySelectorAll('.reveal').forEach(el=>o.observe(el));
+    // Formspree AJAX submit
+    document.getElementById('contact-form').addEventListener('submit', async function(e){
+      e.preventDefault();
+      const ok=document.getElementById('cf-ok'), err=document.getElementById('cf-err');
+      ok.style.display='none'; err.style.display='none';
+      try {
+        const res = await fetch(this.action, {method:'POST',body:new FormData(this),headers:{Accept:'application/json'}});
+        if(res.ok){ ok.style.display='block'; this.reset(); }
+        else { err.style.display='block'; }
+      } catch(ex){ err.style.display='block'; }
+    });
+  </script>
+</body></html>
