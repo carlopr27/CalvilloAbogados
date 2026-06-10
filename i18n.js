@@ -317,7 +317,9 @@ function caSetLang(lang) {
     if (t[k] !== undefined) el.placeholder = t[k];
   });
   const btn = document.getElementById('lang-toggle');
-  if (btn) btn.textContent = lang === 'es' ? 'EN' : 'ES';
+  if (btn) btn.innerHTML = lang === 'es'
+    ? '🇺🇸 EN'
+    : '🇲🇽 ES';
   localStorage.setItem('ca_lang', lang);
   document.documentElement.lang = lang === 'es' ? 'es' : 'en';
 }
