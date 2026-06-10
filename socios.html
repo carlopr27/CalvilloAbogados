@@ -6,19 +6,36 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/css/bootstrap.min.css" rel="stylesheet"/>
   <link rel="stylesheet" href="style.css"/>
   <style>
+    .banner_area{background-image:url('https://images.unsplash.com/photo-1505664194779-8beaceb93744?w=1600&auto=format&fit=crop&q=80')}
     .team-section{padding:80px 0;background:#fff}
-    .team-name{font-size:36px;color:var(--black);text-align:center;margin-bottom:6px}
-    .team-title{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#aaa;text-align:center;margin-bottom:36px}
-    .team-photo{width:100%;max-width:820px;display:block;margin:0 auto 48px;max-height:500px;object-fit:cover;object-position:top}
-    .bio-wrap{max-width:760px;margin:0 auto}
+    .team-name{font-size:36px;color:var(--black);text-align:center;margin-bottom:4px}
+    .team-title{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#aaa;text-align:center;margin-bottom:40px}
+    .team-photo{width:100%;max-width:680px;display:block;margin:0 auto 48px;border-top:3px solid var(--black)}
+    .bio-wrap{max-width:720px;margin:0 auto}
     .bio-wrap p{font-size:15px;color:#555;line-height:1.85;margin-bottom:16px}
     .bio-wrap ul{padding-left:20px;margin-bottom:24px}
     .bio-wrap ul li{font-size:14px;color:#555;line-height:1.8;margin-bottom:10px}
-    .bio-section-label{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#aaa;font-weight:700;border-top:1px solid var(--border);padding-top:24px;margin:24px 0 16px;display:block}
+    .bio-label{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#aaa;font-weight:700;border-top:1px solid var(--border);padding-top:24px;margin:24px 0 16px;display:block}
   </style>
 </head>
 <body>
-  <header class="header_area sticky"><nav class="navbar navbar-expand-lg"><div class="container"><a class="navbar-brand" href="index.html"><img class="logo-standard" src="https://calvilloabogados.com/img/logo.png" alt="Calvillo Abogados"/></a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><div class="collapse navbar-collapse" id="nav"><ul class="nav navbar-nav ml-auto"><li class="nav-item"><a class="nav-link" href="service.html">Servicios</a></li><li class="nav-item"><a class="nav-link" href="noticias.html">Publicaciones y Noticias</a></li><li class="nav-item"><a class="nav-link" href="clientes.html">Clientes</a></li><li class="nav-item"><a class="nav-link" href="socios.html">Equipo</a></li><li class="nav-item"><a class="nav-link" href="contact.html">Contacto</a></li></ul></div></div></nav></header>
+  <header class="header_area sticky">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="index.html"><img class="logo-standard" src="https://calvilloabogados.com/img/logo.png" alt="Calvillo Abogados"/></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+        <div class="collapse navbar-collapse" id="nav">
+          <ul class="nav navbar-nav ml-auto">
+            <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="service.html" data-toggle="dropdown">Servicios <span class="caret"></span></a><div class="dropdown-menu"><a class="dropdown-item" href="service.html#litigio-mercantil">Litigio Mercantil</a><a class="dropdown-item" href="service.html#litigio-civil">Litigio Civil</a><a class="dropdown-item" href="service.html#arbitraje">Arbitraje Comercial</a><a class="dropdown-item" href="service.html#corporativo">Corporativo y M&amp;A</a></div></li>
+            <li class="nav-item"><a class="nav-link" href="noticias.html">Publicaciones y Noticias</a></li>
+            <li class="nav-item"><a class="nav-link" href="clientes.html">Clientes</a></li>
+            <li class="nav-item"><a class="nav-link" href="socios.html">Equipo</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
   <div class="spacer-nav"></div>
   <div class="banner_area"><div class="banner_inner"><h4>Equipo</h4></div></div>
   <section class="team-section">
@@ -26,7 +43,7 @@
       <div class="reveal">
         <h2 class="team-name">Ricardo Calvillo Ortiz</h2>
         <p class="team-title">Socio Fundador</p>
-        <img class="team-photo" src="https://calvilloabogados.com/img/cal.jpg" alt="Ricardo Calvillo Ortiz"/>
+        <img class="team-photo" src="img/ricardo.jpg" alt="Ricardo Calvillo Ortiz"/>
       </div>
       <div class="bio-wrap reveal">
         <p>Su práctica profesional se enfoca en litigio civil y mercantil, así como participación en procedimientos arbitrales nacionales e internacionales. También enfoca su práctica en derecho corporativo, asesorando diversas empresas nacionales e internacionales en sus operaciones en México.</p>
@@ -38,7 +55,7 @@
           <li>Trabajó en <strong>Martínez, Algaba, De Haro y Curiel, S.C.</strong> y <strong>Villasante y Freyman S.C.</strong></li>
           <li>En el sector público, colaboró en la <strong>Oficina de la Presidencia de la República</strong> en la redacción de reformas prioritarias.</li>
         </ul>
-        <span class="bio-section-label">Estudios</span>
+        <span class="bio-label">Estudios</span>
         <ul>
           <li>Licenciado en Derecho — <strong>Universidad Iberoamericana</strong>, Ciudad de México.</li>
           <li>LL.M. en Regulación Internacional de Negocios, Litigio y Arbitraje — <strong>New York University School of Law (NYU)</strong>.</li>

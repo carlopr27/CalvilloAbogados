@@ -121,3 +121,26 @@ h4,h5,h6 { font-family: 'Lato', sans-serif; font-weight: 700; color: var(--black
   .banner_inner h4 { font-size: 34px; }
   .stat-item .num { font-size: 34px; }
 }
+
+/* ─── DROPDOWN ───────────────────────────────────────────── */
+.dropdown-menu {
+  border: none; border-radius: 0;
+  box-shadow: 0 8px 32px rgba(0,0,0,.12);
+  background: var(--white); padding: 8px 0; min-width: 220px;
+  margin-top: 0;
+}
+.dropdown-item {
+  font-family: 'Lato', sans-serif;
+  font-size: 11px; font-weight: 700; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--black);
+  padding: 10px 20px; transition: background .15s, color .15s;
+}
+.dropdown-item:hover { background: var(--black); color: var(--white); }
+.nav-item.dropdown .dropdown-toggle::after { display: none; }
+.nav-item.dropdown .dropdown-toggle .caret {
+  display: inline-block; width: 0; height: 0;
+  margin-left: 6px; vertical-align: middle;
+  border-top: 4px solid currentColor;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+}

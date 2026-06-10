@@ -1,96 +1,57 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"/>
   <title>Calvillo Abogados</title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
   <style>
-    /* ── HERO ──────────────────────────────────────────────── */
-    .home_banner_area {
-      background: url('https://calvilloabogados.com/img/banner/home-banner.jpg') center center / cover no-repeat;
-      min-height: 100vh;
-      display: flex; align-items: center; justify-content: center;
-      position: relative;
-    }
-    .home_banner_area::after {
-      content: ''; position: absolute; inset: 0;
-      background: linear-gradient(to bottom, rgba(0,0,0,.35) 0%, rgba(0,0,0,.55) 100%);
-    }
-    .banner_content { position: relative; z-index: 1; text-align: center; padding: 0 20px; max-width: 760px; }
-    .banner_content .eyebrow {
-      font-size: 11px; letter-spacing: .28em; text-transform: uppercase;
-      color: rgba(255,255,255,.65); margin-bottom: 22px;
-    }
-    .banner_content h1 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(2.4rem, 5vw, 4rem);
-      font-weight: 700; color: #fff; margin-bottom: 24px; line-height: 1.1;
-    }
-    .banner_content p {
-      font-size: 15px; color: rgba(255,255,255,.8); line-height: 1.85; margin-bottom: 0;
-    }
-    .scroll-hint {
-      position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%);
-      z-index: 1; display: flex; flex-direction: column; align-items: center; gap: 8px;
-      font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: rgba(255,255,255,.4);
-    }
-    .scroll-hint span { width: 1px; height: 40px; background: rgba(255,255,255,.25); animation: scrollpulse 2s infinite; }
-    @keyframes scrollpulse { 0%,100%{opacity:.2} 50%{opacity:.7} }
-
-    /* ── AREAS ─────────────────────────────────────────────── */
-    .areas-section { padding: 100px 0; background: #fff; }
-    .areas-section .section-label {
-      font-size: 11px; letter-spacing: .24em; text-transform: uppercase;
-      color: #aaa; margin-bottom: 14px;
-    }
-    .areas-section h2 { font-size: clamp(2rem, 4vw, 3.2rem); color: var(--black); margin-bottom: 32px; }
-    .areas-section .body-text { font-size: 15px; color: #555; line-height: 1.85; max-width: 680px; }
-    .area-divider { width: 1px; background: #eee; align-self: stretch; }
-    .area-pill {
-      display: inline-block; border: 1px solid #ddd;
-      padding: 10px 22px; font-size: 12px; letter-spacing: .12em;
-      text-transform: uppercase; color: #444; margin: 6px 6px 6px 0;
-      transition: background .2s, color .2s;
-    }
-    .area-pill:hover { background: var(--black); color: #fff; border-color: var(--black); }
-
-    /* ── SERVICES ──────────────────────────────────────────── */
-    .service-area { background: var(--black); padding: 100px 0; }
-    .single-service { margin-bottom: 32px; cursor: pointer; }
-    .service-thumb { position: relative; overflow: hidden; }
-    .service-thumb img { width: 100%; height: 220px; object-fit: cover; display: block; transition: transform .5s; }
-    .single-service:hover .service-thumb img { transform: scale(1.06); }
-    .service-overlay {
-      position: absolute; inset: 0;
-      background: rgba(0,0,0,0); transition: background .35s;
-      display: flex; align-items: flex-end; padding: 18px;
-    }
-    .single-service:hover .service-overlay { background: rgba(0,0,0,.45); }
-    .service-overlay-text {
-      color: #fff; font-size: 11px; letter-spacing: .16em; text-transform: uppercase;
-      opacity: 0; transform: translateY(8px); transition: opacity .3s, transform .3s;
-    }
-    .single-service:hover .service-overlay-text { opacity: 1; transform: translateY(0); }
-    .service-bottom { padding: 14px 0 0; }
-    .service-bottom h5 { font-family: 'Lato', sans-serif; font-size: 14px; font-weight: 700; color: #fff; margin: 0; line-height: 1.4; }
-
-    /* ── FOOTER PADDING for fixed nav ─────────────────────── */
-    .spacer-nav { height: 90px; } /* push content below fixed nav on non-hero pages */
+    .home_banner_area{background:url('https://calvilloabogados.com/img/banner/home-banner.jpg') center center/cover no-repeat;min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative}
+    .home_banner_area::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.3) 0%,rgba(0,0,0,.55) 100%)}
+    .banner_content{position:relative;z-index:1;text-align:center;padding:0 20px;max-width:760px}
+    .banner_content .eyebrow{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:rgba(255,255,255,.65);margin-bottom:22px}
+    .banner_content h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.4rem,5vw,4rem);font-weight:700;color:#fff;margin-bottom:24px;line-height:1.1}
+    .banner_content p{font-size:15px;color:rgba(255,255,255,.8);line-height:1.85}
+    .scroll-hint{position:absolute;bottom:32px;left:50%;transform:translateX(-50%);z-index:1;display:flex;flex-direction:column;align-items:center;gap:8px;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.4)}
+    .scroll-hint span{width:1px;height:40px;background:rgba(255,255,255,.25);animation:sp 2s infinite}
+    @keyframes sp{0%,100%{opacity:.2}50%{opacity:.7}}
+    .areas-section{padding:100px 0;background:#fff}
+    .areas-section .section-label{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:#aaa;margin-bottom:14px}
+    .areas-section h2{font-size:clamp(2rem,4vw,3.2rem);color:var(--black);margin-bottom:32px}
+    .areas-section .body-text{font-size:15px;color:#555;line-height:1.85;max-width:680px}
+    .area-divider{width:1px;background:#eee;align-self:stretch}
+    .area-pill{display:inline-block;border:1px solid #ddd;padding:10px 22px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#444;margin:6px 6px 6px 0;transition:background .2s,color .2s,border-color .2s}
+    .area-pill:hover{background:var(--black);color:#fff;border-color:var(--black)}
+    .service-area{background:var(--black);padding:100px 0}
+    .single-service{margin-bottom:32px;cursor:pointer}
+    .service-thumb{position:relative;overflow:hidden}
+    .service-thumb img{width:100%;height:220px;object-fit:cover;display:block;transition:transform .5s}
+    .single-service:hover .service-thumb img{transform:scale(1.06)}
+    .service-overlay{position:absolute;inset:0;background:rgba(0,0,0,0);transition:background .35s;display:flex;align-items:flex-end;padding:18px}
+    .single-service:hover .service-overlay{background:rgba(0,0,0,.45)}
+    .service-overlay-text{color:#fff;font-size:11px;letter-spacing:.16em;text-transform:uppercase;opacity:0;transform:translateY(8px);transition:opacity .3s,transform .3s}
+    .single-service:hover .service-overlay-text{opacity:1;transform:translateY(0)}
+    .service-bottom{padding:14px 0 0}
+    .service-bottom h5{font-family:'Lato',sans-serif;font-size:14px;font-weight:700;color:#fff;margin:0;line-height:1.4}
   </style>
 </head>
 <body>
-
   <header class="header_area" id="header">
     <nav class="navbar navbar-expand-lg">
       <div class="container">
-        <a class="navbar-brand" href="index.html"><img class="logo-standard" src="https://calvilloabogados.com/img/logo.png" alt="Calvillo Abogados" /></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav">
-          <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
-        </button>
+        <a class="navbar-brand" href="index.html"><img class="logo-standard" src="https://calvilloabogados.com/img/logo.png" alt="Calvillo Abogados"/></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
         <div class="collapse navbar-collapse" id="nav">
           <ul class="nav navbar-nav ml-auto">
-            <li class="nav-item"><a class="nav-link" href="service.html">Servicios</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="service.html" id="svcDrop" data-toggle="dropdown">Servicios <span class="caret"></span></a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="service.html#litigio-mercantil">Litigio Mercantil</a>
+                <a class="dropdown-item" href="service.html#litigio-civil">Litigio Civil</a>
+                <a class="dropdown-item" href="service.html#arbitraje">Arbitraje Comercial</a>
+                <a class="dropdown-item" href="service.html#corporativo">Corporativo y M&amp;A</a>
+              </div>
+            </li>
             <li class="nav-item"><a class="nav-link" href="noticias.html">Publicaciones y Noticias</a></li>
             <li class="nav-item"><a class="nav-link" href="clientes.html">Clientes</a></li>
             <li class="nav-item"><a class="nav-link" href="socios.html">Equipo</a></li>
@@ -101,7 +62,6 @@
     </nav>
   </header>
 
-  <!-- HERO -->
   <section class="home_banner_area">
     <div class="banner_content">
       <p class="eyebrow">Firma de Abogados · Ciudad de México</p>
@@ -111,7 +71,6 @@
     <div class="scroll-hint"><span></span></div>
   </section>
 
-  <!-- STATS -->
   <div class="stats-strip reveal">
     <div class="container">
       <div class="row no-gutters">
@@ -123,7 +82,6 @@
     </div>
   </div>
 
-  <!-- ÁREAS -->
   <section class="areas-section">
     <div class="container">
       <div class="row align-items-center">
@@ -134,60 +92,36 @@
         </div>
         <div class="col-lg-1 d-none d-lg-flex justify-content-center"><div class="area-divider"></div></div>
         <div class="col-lg-5 reveal" style="transition-delay:.15s">
-          <p class="section-label" style="margin-top:0">Áreas de práctica</p>
+          <p class="section-label">Áreas de práctica</p>
           <div style="margin-top:14px">
-            <a href="service.html" class="area-pill">Litigio Mercantil</a>
-            <a href="service.html" class="area-pill">Litigio Civil</a>
-            <a href="service.html" class="area-pill">Arbitraje Comercial</a>
-            <a href="service.html" class="area-pill">Corporativo M&amp;A</a>
+            <a href="service.html#litigio-mercantil" class="area-pill">Litigio Mercantil</a>
+            <a href="service.html#litigio-civil" class="area-pill">Litigio Civil</a>
+            <a href="service.html#arbitraje" class="area-pill">Arbitraje Comercial</a>
+            <a href="service.html#corporativo" class="area-pill">Corporativo M&amp;A</a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SERVICES -->
   <section class="service-area">
     <div class="container">
-      <div class="main_title white reveal">
-        <h1>Nuestros Servicios</h1>
-        <p>Conoce nuestros servicios a detalle</p>
-        <div class="title-rule"></div>
-      </div>
+      <div class="main_title white reveal"><h1>Nuestros Servicios</h1><p>Conoce nuestros servicios a detalle</p><div class="title-rule"></div></div>
       <div class="row">
-        <div class="col-lg-3 col-md-6 reveal"><div class="single-service"><div class="service-thumb"><img src="https://calvilloabogados.com/img/elements/d.jpg" alt="Litigio Mercantil" /><div class="service-overlay"><span class="service-overlay-text">Ver detalle →</span></div></div><div class="service-bottom"><h5><a href="service.html">Litigio Mercantil</a></h5></div></div></div>
-        <div class="col-lg-3 col-md-6 reveal" style="transition-delay:.1s"><div class="single-service"><div class="service-thumb"><img src="https://calvilloabogados.com/img/service/service5.jpg" alt="Litigio Civil" /><div class="service-overlay"><span class="service-overlay-text">Ver detalle →</span></div></div><div class="service-bottom"><h5><a href="service.html">Litigio Civil</a></h5></div></div></div>
-        <div class="col-lg-3 col-md-6 reveal" style="transition-delay:.2s"><div class="single-service"><div class="service-thumb"><img src="https://calvilloabogados.com/img/service/service4.jpg" alt="Corporativo" /><div class="service-overlay"><span class="service-overlay-text">Ver detalle →</span></div></div><div class="service-bottom"><h5><a href="service.html">Corporativo y Transaccional (M&amp;A)</a></h5></div></div></div>
-        <div class="col-lg-3 col-md-6 reveal" style="transition-delay:.3s"><div class="single-service"><div class="service-thumb"><img src="https://calvilloabogados.com/img/service/service1.jpg" alt="Arbitraje" /><div class="service-overlay"><span class="service-overlay-text">Ver detalle →</span></div></div><div class="service-bottom"><h5><a href="service.html">Arbitraje Comercial</a></h5></div></div></div>
+        <div class="col-lg-3 col-md-6 reveal"><div class="single-service"><div class="service-thumb"><img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=600&auto=format&fit=crop&q=80" alt="Litigio Mercantil"/><div class="service-overlay"><span class="service-overlay-text">Ver detalle →</span></div></div><div class="service-bottom"><h5><a href="service.html#litigio-mercantil">Litigio Mercantil</a></h5></div></div></div>
+        <div class="col-lg-3 col-md-6 reveal" style="transition-delay:.1s"><div class="single-service"><div class="service-thumb"><img src="https://images.unsplash.com/photo-1593115057322-e94b77572f20?w=600&auto=format&fit=crop&q=80" alt="Litigio Civil"/><div class="service-overlay"><span class="service-overlay-text">Ver detalle →</span></div></div><div class="service-bottom"><h5><a href="service.html#litigio-civil">Litigio Civil</a></h5></div></div></div>
+        <div class="col-lg-3 col-md-6 reveal" style="transition-delay:.2s"><div class="single-service"><div class="service-thumb"><img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&auto=format&fit=crop&q=80" alt="Arbitraje"/><div class="service-overlay"><span class="service-overlay-text">Ver detalle →</span></div></div><div class="service-bottom"><h5><a href="service.html#arbitraje">Arbitraje Comercial</a></h5></div></div></div>
+        <div class="col-lg-3 col-md-6 reveal" style="transition-delay:.3s"><div class="single-service"><div class="service-thumb"><img src="https://images.unsplash.com/photo-1505664194779-8beaceb93744?w=600&auto=format&fit=crop&q=80" alt="Corporativo"/><div class="service-overlay"><span class="service-overlay-text">Ver detalle →</span></div></div><div class="service-bottom"><h5><a href="service.html#corporativo">Corporativo y Transaccional (M&amp;A)</a></h5></div></div></div>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer class="footer-area">
     <div class="container">
       <div class="row">
-        <div class="col-lg-4 mb-4 reveal">
-          <img class="footer-logo" src="https://calvilloabogados.com/img/logo.png" alt="Calvillo Abogados" />
-          <p class="footer-tagline">Soluciones sofisticadas<br/>para problemas complejos.</p>
-        </div>
-        <div class="col-lg-4 mb-4 reveal" style="transition-delay:.1s">
-          <p class="footer-heading">Navegación</p>
-          <ul class="footer-links">
-            <li><a href="service.html">Servicios</a></li>
-            <li><a href="noticias.html">Publicaciones y Noticias</a></li>
-            <li><a href="clientes.html">Clientes</a></li>
-            <li><a href="socios.html">Equipo</a></li>
-            <li><a href="contact.html">Contacto</a></li>
-          </ul>
-        </div>
-        <div class="col-lg-4 mb-4 reveal" style="transition-delay:.2s">
-          <p class="footer-heading">Contacto</p>
-          <div class="footer-contact">
-            <p>Leibnitz 117 - Piso 3<br/>Col. Verónica Anzúrez, CDMX</p>
-            <p style="margin-top:10px"><a href="mailto:contacto@calvilloabogados.com">contacto@calvilloabogados.com</a></p>
-          </div>
-        </div>
+        <div class="col-lg-4 mb-4 reveal"><img class="footer-logo" src="https://calvilloabogados.com/img/logo.png" alt=""/><p class="footer-tagline">Soluciones sofisticadas<br/>para problemas complejos.</p></div>
+        <div class="col-lg-4 mb-4 reveal" style="transition-delay:.1s"><p class="footer-heading">Navegación</p><ul class="footer-links"><li><a href="service.html">Servicios</a></li><li><a href="noticias.html">Publicaciones y Noticias</a></li><li><a href="clientes.html">Clientes</a></li><li><a href="socios.html">Equipo</a></li><li><a href="contact.html">Contacto</a></li></ul></div>
+        <div class="col-lg-4 mb-4 reveal" style="transition-delay:.2s"><p class="footer-heading">Contacto</p><div class="footer-contact"><p>Leibnitz 117 - Piso 3<br/>Col. Verónica Anzúrez, CDMX</p><p style="margin-top:10px"><a href="mailto:contacto@calvilloabogados.com">contacto@calvilloabogados.com</a></p></div></div>
       </div>
     </div>
     <div class="footer-bottom"><div class="container"><p>Copyright &copy; <script>document.write(new Date().getFullYear())</script> All rights reserved | Calvillo Abogados</p></div></div>
@@ -196,15 +130,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/js/bootstrap.bundle.min.js"></script>
   <script>
-    // Sticky navbar
-    window.addEventListener('scroll', () => {
-      document.getElementById('header').classList.toggle('sticky', window.scrollY > 60);
-    });
-    // Scroll reveal
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
-    }, { threshold: 0.12 });
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    window.addEventListener('scroll',()=>{document.getElementById('header').classList.toggle('sticky',window.scrollY>60)});
+    const o=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');o.unobserve(x.target)}})},{threshold:.12});
+    document.querySelectorAll('.reveal').forEach(el=>o.observe(el));
   </script>
 </body>
 </html>

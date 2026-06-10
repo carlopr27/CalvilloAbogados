@@ -6,6 +6,7 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/css/bootstrap.min.css" rel="stylesheet"/>
   <link rel="stylesheet" href="style.css"/>
   <style>
+    .banner_area{background-image:url('https://images.unsplash.com/photo-1593115057322-e94b77572f20?w=1600&auto=format&fit=crop&q=80')}
     .news-section{padding:80px 0;background:#fff}
     .news-list{max-width:800px;margin:0 auto}
     .news-item{display:flex;align-items:flex-start;gap:24px;padding:36px 0;border-bottom:1px solid var(--border)}
@@ -20,7 +21,7 @@
   </style>
 </head>
 <body>
-  <header class="header_area sticky"><nav class="navbar navbar-expand-lg"><div class="container"><a class="navbar-brand" href="index.html"><img class="logo-standard" src="https://calvilloabogados.com/img/logo.png" alt="Calvillo Abogados"/></a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><div class="collapse navbar-collapse" id="nav"><ul class="nav navbar-nav ml-auto"><li class="nav-item"><a class="nav-link" href="service.html">Servicios</a></li><li class="nav-item"><a class="nav-link" href="noticias.html">Publicaciones y Noticias</a></li><li class="nav-item"><a class="nav-link" href="clientes.html">Clientes</a></li><li class="nav-item"><a class="nav-link" href="socios.html">Equipo</a></li><li class="nav-item"><a class="nav-link" href="contact.html">Contacto</a></li></ul></div></div></nav></header>
+  <header class="header_area sticky"><nav class="navbar navbar-expand-lg"><div class="container"><a class="navbar-brand" href="index.html"><img class="logo-standard" src="https://calvilloabogados.com/img/logo.png" alt="Calvillo Abogados"/></a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><div class="collapse navbar-collapse" id="nav"><ul class="nav navbar-nav ml-auto"><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="service.html" data-toggle="dropdown">Servicios <span class="caret"></span></a><div class="dropdown-menu"><a class="dropdown-item" href="service.html#litigio-mercantil">Litigio Mercantil</a><a class="dropdown-item" href="service.html#litigio-civil">Litigio Civil</a><a class="dropdown-item" href="service.html#arbitraje">Arbitraje Comercial</a><a class="dropdown-item" href="service.html#corporativo">Corporativo y M&amp;A</a></div></li><li class="nav-item"><a class="nav-link" href="noticias.html">Publicaciones y Noticias</a></li><li class="nav-item"><a class="nav-link" href="clientes.html">Clientes</a></li><li class="nav-item"><a class="nav-link" href="socios.html">Equipo</a></li><li class="nav-item"><a class="nav-link" href="contact.html">Contacto</a></li></ul></div></div></nav></header>
   <div class="spacer-nav"></div>
   <div class="banner_area"><div class="banner_inner"><h4>Publicaciones</h4></div></div>
   <section class="news-section">
@@ -34,8 +35,7 @@
     </div>
   </section>
   <footer class="footer-area"><div class="container"><div class="row"><div class="col-lg-4 mb-4"><img class="footer-logo" src="https://calvilloabogados.com/img/logo.png" alt=""/><p class="footer-tagline">Soluciones sofisticadas<br/>para problemas complejos.</p></div><div class="col-lg-4 mb-4"><p class="footer-heading">Navegación</p><ul class="footer-links"><li><a href="service.html">Servicios</a></li><li><a href="noticias.html">Publicaciones</a></li><li><a href="clientes.html">Clientes</a></li><li><a href="socios.html">Equipo</a></li><li><a href="contact.html">Contacto</a></li></ul></div><div class="col-lg-4 mb-4"><p class="footer-heading">Contacto</p><div class="footer-contact"><p>Leibnitz 117 - Piso 3<br/>Col. Verónica Anzúrez, CDMX</p><p style="margin-top:10px"><a href="mailto:contacto@calvilloabogados.com">contacto@calvilloabogados.com</a></p></div></div></div></div><div class="footer-bottom"><div class="container"><p>Copyright &copy; <script>document.write(new Date().getFullYear())</script> All rights reserved | Calvillo Abogados</p></div></div></footer>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/js/bootstrap.bundle.min.js"></script>
   <script>const o=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');o.unobserve(x.target)}})},{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>o.observe(el));</script>
 </body>
 </html>

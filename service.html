@@ -6,15 +6,15 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/css/bootstrap.min.css" rel="stylesheet"/>
   <link rel="stylesheet" href="style.css"/>
   <style>
-    .service-details-area{padding:80px 0;background:#fff}
-    .service-card{max-width:860px;margin:0 auto;text-align:center}
-    .service-card img{width:100%;max-height:400px;object-fit:cover;margin-bottom:32px}
-    .service-card h3{font-size:32px;color:var(--black);margin-bottom:20px}
-    .service-card p{font-size:15px;color:#555;line-height:1.85;margin-bottom:14px}
-    .service-card ul{text-align:left;display:inline-block;padding-left:22px}
-    .service-card ul li{font-size:14px;color:#555;line-height:1.8;margin-bottom:8px}
-    .carousel-control-prev,.carousel-control-next{width:44px;height:44px;background:var(--black);top:30%;transform:none;opacity:1;border-radius:0}
-    .carousel-control-prev{left:-22px}.carousel-control-next{right:-22px}
+    .banner_area{background-image:url('https://images.unsplash.com/photo-1717388835452-c9c8cda0002e?w=1600&auto=format&fit=crop&q=80')}
+    .svc-block{padding:80px 0;border-bottom:1px solid var(--border)}
+    .svc-block:last-child{border-bottom:none}
+    .svc-block img{width:100%;height:360px;object-fit:cover;display:block}
+    .svc-tag{font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:#aaa;margin-bottom:12px}
+    .svc-block h2{font-size:28px;color:var(--black);margin-bottom:20px;line-height:1.2}
+    .svc-block p{font-size:14px;color:#555;line-height:1.85;margin-bottom:12px}
+    .svc-block ul{padding-left:20px;margin-bottom:0}
+    .svc-block ul li{font-size:14px;color:#555;line-height:1.8;margin-bottom:8px}
   </style>
 </head>
 <body>
@@ -25,7 +25,15 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
         <div class="collapse navbar-collapse" id="nav">
           <ul class="nav navbar-nav ml-auto">
-            <li class="nav-item"><a class="nav-link" href="service.html">Servicios</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="service.html" data-toggle="dropdown">Servicios <span class="caret"></span></a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#litigio-mercantil">Litigio Mercantil</a>
+                <a class="dropdown-item" href="#litigio-civil">Litigio Civil</a>
+                <a class="dropdown-item" href="#arbitraje">Arbitraje Comercial</a>
+                <a class="dropdown-item" href="#corporativo">Corporativo y M&amp;A</a>
+              </div>
+            </li>
             <li class="nav-item"><a class="nav-link" href="noticias.html">Publicaciones y Noticias</a></li>
             <li class="nav-item"><a class="nav-link" href="clientes.html">Clientes</a></li>
             <li class="nav-item"><a class="nav-link" href="socios.html">Equipo</a></li>
@@ -36,48 +44,78 @@
     </nav>
   </header>
   <div class="spacer-nav"></div>
+
   <div class="banner_area"><div class="banner_inner"><h4>Servicios</h4></div></div>
-  <section class="service-details-area">
+
+  <!-- Litigio Mercantil -->
+  <div class="svc-block" id="litigio-mercantil">
     <div class="container">
       <div class="main_title reveal"><h1>Nuestros Servicios</h1><div class="title-rule"></div></div>
-      <div id="svc" class="carousel slide reveal" data-ride="carousel" data-interval="false">
-        <div class="carousel-inner">
-          <div class="carousel-item active"><div class="service-card">
-            <img src="https://calvilloabogados.com/img/elements/d.jpg" alt="Litigio Mercantil"/>
-            <h3>Litigio Mercantil</h3>
-            <p>Calvillo Abogados cuenta con una extensa práctica en litigios mercantiles enfocados principalmente en el área financiera. Siempre preocupados por las necesidades de nuestros clientes, nuestra estrategia va enfocada en obtener un resultado tangible, diseñando e implementando estrategias personalizadas para cada caso.</p>
-            <p>Nuestro Socio fundador se especializó en Regulación Internacional de Negocios, Litigio y Arbitraje en Nueva York, lo que nos permite asesorar a clientes con controversias en México relacionadas con litigios en otros países, apoyados en una amplia red de abogados en otras jurisdicciones.</p>
-            <p>Representamos a nuestros clientes en la Ciudad de México y en las distintas entidades de la República Mexicana.</p>
-          </div></div>
-          <div class="carousel-item"><div class="service-card">
-            <img src="https://calvilloabogados.com/img/service/service5.jpg" alt="Litigio Civil"/>
-            <h3>Litigio Civil</h3>
-            <p>Calvillo Abogados cuenta con una sólida práctica en litigio civil. Representamos a clientes en controversias civiles contractuales y extracontractuales. Contamos con una de las prácticas más sólidas en daño moral de México, así como en controversias inmobiliarias y de arrendamiento.</p>
-          </div></div>
-          <div class="carousel-item"><div class="service-card">
-            <img src="https://calvilloabogados.com/img/service/service4.jpg" alt="Arbitraje Comercial"/>
-            <h3>Arbitraje Comercial y Medios Alternos</h3>
-            <p>Nuestro despacho tiene la firme convicción de que no todos los conflictos se deben resolver en litigio. Exploramos todas las posibilidades para resolver las controversias de nuestros clientes, participando en negociaciones y mediaciones.</p>
-            <p>Nuestro socio fundador se especializó en Arbitraje en Nueva York y ha participado en múltiples casos de arbitraje comercial. Brindamos asesoría en procedimientos arbitrales y en procedimientos judiciales de ejecución o anulación de laudos.</p>
-          </div></div>
-          <div class="carousel-item"><div class="service-card">
-            <img src="https://calvilloabogados.com/img/service/service1.jpg" alt="Corporativo"/>
-            <h3>Corporativo y Transaccional (M&amp;A)</h3>
-            <p>Nuestra práctica corporativa se caracteriza por un enfoque de negocios en todas nuestras asesorías. Asesoramos a empresas nacionales y extranjeras con operaciones en México desde que la sociedad inicia sus operaciones.</p>
-            <ul>
-              <li>Constitución de sociedades y celebración de contratos.</li>
-              <li>Asesoría en asambleas de accionistas o socios.</li>
-              <li>Acuerdos entre accionistas o socios.</li>
-              <li>Contratos de compraventa de acciones y asociación en participación.</li>
-              <li>Representación de empresas e inversionistas extranjeros en México.</li>
-            </ul>
-          </div></div>
+      <div class="row align-items-center">
+        <div class="col-lg-6 reveal"><img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&auto=format&fit=crop&q=80" alt="Litigio Mercantil"/></div>
+        <div class="col-lg-6 reveal" style="padding:40px 40px">
+          <p class="svc-tag">Área Contenciosa</p>
+          <h2>Litigio Mercantil</h2>
+          <p>Calvillo Abogados cuenta con una extensa práctica en litigios mercantiles enfocados principalmente en el área financiera. Nuestra estrategia va enfocada en obtener un resultado tangible, diseñando e implementando estrategias personalizadas para la atención de los litigios de nuestros clientes.</p>
+          <p>Nuestro Socio fundador se especializó en Regulación Internacional de Negocios, Litigio y Arbitraje en Nueva York, lo que nos permite asesorar a clientes con controversias en México relacionadas con litigios en otros países, apoyados en una amplia red de abogados en otras jurisdicciones.</p>
+          <p>Representamos a nuestros clientes en la Ciudad de México y en las distintas entidades de la República Mexicana.</p>
         </div>
-        <a class="carousel-control-prev" href="#svc" data-slide="prev"><span class="carousel-control-prev-icon"></span></a>
-        <a class="carousel-control-next" href="#svc" data-slide="next"><span class="carousel-control-next-icon"></span></a>
       </div>
     </div>
-  </section>
+  </div>
+
+  <!-- Litigio Civil -->
+  <div class="svc-block" id="litigio-civil" style="background:var(--light)">
+    <div class="container">
+      <div class="row align-items-center flex-row-reverse">
+        <div class="col-lg-6 reveal"><img src="https://images.unsplash.com/photo-1593115057322-e94b77572f20?w=800&auto=format&fit=crop&q=80" alt="Litigio Civil"/></div>
+        <div class="col-lg-6 reveal" style="padding:40px 40px">
+          <p class="svc-tag">Área Contenciosa</p>
+          <h2>Litigio Civil</h2>
+          <p>Calvillo Abogados cuenta con una sólida práctica en litigio civil. Representamos a clientes en controversias civiles contractuales y extracontractuales. Contamos con una de las prácticas más sólidas en daño moral de México.</p>
+          <p>También representamos a clientes en diversas controversias inmobiliarias, así como controversias de arrendamiento.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Arbitraje -->
+  <div class="svc-block" id="arbitraje">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 reveal"><img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&auto=format&fit=crop&q=80" alt="Arbitraje Comercial"/></div>
+        <div class="col-lg-6 reveal" style="padding:40px 40px">
+          <p class="svc-tag">Área Contenciosa</p>
+          <h2>Arbitraje Comercial y Medios Alternos</h2>
+          <p>Nuestro despacho tiene la firme convicción de que no todos los conflictos se deben resolver en un litigio. Exploramos todas las posibilidades para resolver las controversias de nuestros clientes, asesoramos en las negociaciones con su contraparte y participamos en las mediaciones que se lleven a cabo.</p>
+          <p>Nuestro socio fundador se especializó en Arbitraje en Nueva York y ha participado en múltiples casos de arbitraje comercial, actuando como abogado de parte. Brindamos asesoría tanto en procedimientos arbitrales como en procedimientos judiciales de ejecución o anulación de laudos.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Corporativo -->
+  <div class="svc-block" id="corporativo" style="background:var(--light)">
+    <div class="container">
+      <div class="row align-items-center flex-row-reverse">
+        <div class="col-lg-6 reveal"><img src="https://images.unsplash.com/photo-1505664194779-8beaceb93744?w=800&auto=format&fit=crop&q=80" alt="Corporativo y Transaccional"/></div>
+        <div class="col-lg-6 reveal" style="padding:40px 40px">
+          <p class="svc-tag">Área Transaccional</p>
+          <h2>Corporativo y Transaccional (M&amp;A)</h2>
+          <p>Nuestra práctica corporativa se caracteriza por tener un enfoque de negocios en todas nuestras asesorías legales. Asesoramos a empresas nacionales y extranjeras con operaciones en México en relación con todos sus asuntos corporativos.</p>
+          <ul>
+            <li>Constitución de sociedades y celebración de todo tipo de contratos.</li>
+            <li>Asesoría en la preparación de asambleas de accionistas o socios.</li>
+            <li>Preparación de acuerdos entre accionistas o socios.</li>
+            <li>Negociación y celebración de contratos de compraventa de acciones.</li>
+            <li>Negociación y celebración de contratos de asociación en participación.</li>
+            <li>Representación de empresas e inversionistas extranjeros en México.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <footer class="footer-area">
     <div class="container">
       <div class="row">
