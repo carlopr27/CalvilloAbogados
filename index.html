@@ -44,7 +44,31 @@
     .service-bottom h5{font-family:'Lato',sans-serif;font-size:13px;font-weight:700;color:#fff;margin:0;line-height:1.4;letter-spacing:.04em}
   </style>
 </head>
-<body>
+<body class="intro-lock">
+
+  <!-- INTRO OVERLAY -->
+  <div id="intro-overlay" class="intro-overlay" aria-label="Intro animation">
+    <div class="intro-stage">
+      <video
+        id="intro-video"
+        class="intro-video"
+        autoplay
+        muted
+        playsinline
+        preload="auto"
+      >
+        <source src="assets/intro/intro-video.mp4" type="video/mp4">
+      </video>
+
+      <img
+        id="intro-image"
+        class="intro-image"
+        src="assets/intro/org-chart.png"
+        alt="Calvillo Pearson Specter Litt"
+      />
+    </div>
+  </div>
+
 
   <!-- NAV -->
   <header class="header_area" id="header">
@@ -248,5 +272,49 @@
     const o=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');o.unobserve(x.target)}})},{threshold:.1});
     document.querySelectorAll('.reveal').forEach(el=>o.observe(el));
   </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const overlay = document.getElementById('intro-overlay');
+      const video = document.getElementById('intro-video');
+      const image = document.getElementById('intro-image');
+
+      if (!overlay || !video || !image) {
+        document.body.classList.remove('intro-lock');
+        return;
+      }
+
+      let finished = false;
+
+      function closeIntro() {
+        overlay.classList.add('is-hidden');
+        document.body.classList.remove('intro-lock');
+
+        setTimeout(function () {
+          overlay.remove();
+        }, 700);
+      }
+
+      function showImageThenClose() {
+        if (finished) return;
+        finished = true;
+
+        video.pause();
+        video.style.display = 'none';
+        image.style.display = 'block';
+
+        setTimeout(closeIntro, 3000);
+      }
+
+      video.addEventListener('ended', showImageThenClose);
+      video.addEventListener('error', showImageThenClose);
+
+      const playPromise = video.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(showImageThenClose);
+      }
+    });
+  </script>
+
 </body>
 </html>
