@@ -308,30 +308,36 @@
       video.addEventListener('ended', showImageThenClose);
       video.addEventListener('error', showImageThenClose);
 
-      function tryPlayWithSound() {
+      // Try to autoplay WITH sound first.
+      // Important: many browsers block autoplay with sound until the user interacts.
+      video.muted = false;
+      video.volume = 1;
+
+      function enableSoundOnInteraction() {
         video.muted = false;
         video.volume = 1;
+        video.play().catch(function () {});
 
-        const playPromise = video.play();
-
-        if (playPromise !== undefined) {
-          playPromise.catch(function () {
-            // Browser blocked autoplay with sound.
-            // Keep the intro open; do not skip to the image/close state.
-            const resumeIntro = function () {
-              video.muted = false;
-              video.volume = 1;
-              video.play().catch(function () {});
-            };
-
-            document.addEventListener('click', resumeIntro, { once: true });
-            document.addEventListener('touchstart', resumeIntro, { once: true });
-            document.addEventListener('keydown', resumeIntro, { once: true });
-          });
-        }
+        document.removeEventListener('click', enableSoundOnInteraction);
+        document.removeEventListener('touchstart', enableSoundOnInteraction);
+        document.removeEventListener('keydown', enableSoundOnInteraction);
       }
 
-      tryPlayWithSound();
+      const playPromise = video.play();
+
+      if (playPromise !== undefined) {
+        playPromise.catch(function () {
+          // If the browser blocks sound autoplay, keep the intro working:
+          // retry muted instead of closing after 1 second.
+          video.muted = true;
+          video.play().catch(showImageThenClose);
+
+          // Any first user interaction will unmute the same video.
+          document.addEventListener('click', enableSoundOnInteraction, { once: true });
+          document.addEventListener('touchstart', enableSoundOnInteraction, { once: true });
+          document.addEventListener('keydown', enableSoundOnInteraction, { once: true });
+        });
+      }
     });
   </script>
 
