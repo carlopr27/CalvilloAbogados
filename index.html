@@ -12,71 +12,7 @@
   <meta name="twitter:card" content="summary_large_image"/>
   <link rel="icon" type="image/png" href="https://calvilloabogados.com/img/logo.png"/>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/css/bootstrap.min.css" rel="stylesheet"/>
-  <link rel="stylesheet" href="style.css?v=3"/>
-  <style id="intro-critical-css">
-    /* Critical inline CSS: keeps intro as a real overlay even if style.css is cached */
-    #intro-overlay.intro-overlay{
-      position:fixed !important;
-      top:0 !important;
-      right:0 !important;
-      bottom:0 !important;
-      left:0 !important;
-      width:100vw !important;
-      height:100vh !important;
-      z-index:2147483647 !important;
-      background:#000 !important;
-      display:flex !important;
-      align-items:center !important;
-      justify-content:center !important;
-      overflow:hidden !important;
-      margin:0 !important;
-      padding:0 !important;
-    }
-    #intro-overlay.intro-overlay.is-hidden{
-      opacity:0 !important;
-      visibility:hidden !important;
-      pointer-events:none !important;
-      transition:opacity .6s ease, visibility .6s ease !important;
-    }
-    #intro-overlay .intro-stage{
-      width:100vw !important;
-      height:100vh !important;
-      position:relative !important;
-      display:flex !important;
-      align-items:center !important;
-      justify-content:center !important;
-      margin:0 !important;
-      padding:0 !important;
-    }
-    #intro-video.intro-video{
-      width:min(50vw,760px) !important;
-      height:auto !important;
-      max-height:50vh !important;
-      object-fit:contain !important;
-      background:#000 !important;
-      box-shadow:0 24px 80px rgba(0,0,0,.45) !important;
-      display:block;
-    }
-    #intro-image.intro-image{
-      display:none;
-      width:100vw !important;
-      height:100vh !important;
-      object-fit:contain !important;
-      background:#fff !important;
-      padding:clamp(16px,4vw,48px) !important;
-      margin:0 !important;
-    }
-    body.intro-lock{
-      overflow:hidden !important;
-    }
-    @media(max-width:768px){
-      #intro-video.intro-video{
-        width:72vw !important;
-        max-height:50vh !important;
-      }
-    }
-  </style>
-
+  <link rel="stylesheet" href="style.css"/>
   <style>
     /* HERO */
     .home_banner_area{background:url('https://calvilloabogados.com/img/banner/home-banner.jpg') center center/cover no-repeat;min-height:calc(100vh - 210px);max-height:700px;height:calc(100vh - 210px);display:flex;align-items:center;justify-content:center;position:relative}
@@ -117,17 +53,16 @@
         id="intro-video"
         class="intro-video"
         autoplay
-        muted
         playsinline
         preload="auto"
       >
-        <source src="assets/intro/intro-video.mp4?v=3" type="video/mp4">
+        <source src="assets/intro/intro-video.mp4" type="video/mp4">
       </video>
 
       <img
         id="intro-image"
         class="intro-image"
-        src="assets/intro/org-chart.png?v=3"
+        src="assets/intro/org-chart.png"
         alt="Calvillo Pearson Specter Litt"
       />
     </div>
@@ -352,9 +287,6 @@
 
       function closeIntro() {
         overlay.classList.add('is-hidden');
-        overlay.style.opacity = '0';
-        overlay.style.visibility = 'hidden';
-        overlay.style.pointerEvents = 'none';
         document.body.classList.remove('intro-lock');
 
         setTimeout(function () {
@@ -375,6 +307,9 @@
 
       video.addEventListener('ended', showImageThenClose);
       video.addEventListener('error', showImageThenClose);
+
+      video.muted = false;
+      video.volume = 1;
 
       const playPromise = video.play();
       if (playPromise !== undefined) {
