@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"/>
+  <title>Equipo · Calvillo Abogados</title>
+  <link rel="icon" href="https://calvilloabogados.com/img/logo.png"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    .banner_area{background-image:url('https://images.unsplash.com/photo-1505664194779-8beaceb93744?w=1600&auto=format&fit=crop&q=80')}
+    .partner-section{padding:80px 0;background:#fff}
+    .partner-photo{width:100%;max-width:640px;display:block;margin:0 auto 48px;border-top:3px solid var(--black)}
+    .partner-name{font-size:36px;text-align:center;color:var(--black);margin-bottom:4px}
+    .partner-title{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#aaa;text-align:center;margin-bottom:40px}
+    .bio-wrap{max-width:720px;margin:0 auto}
+    .bio-wrap p{font-size:15px;color:#555;line-height:1.85;margin-bottom:16px}
+    .bio-wrap ul{padding-left:20px;margin-bottom:24px}
+    .bio-wrap ul li{font-size:14px;color:#555;line-height:1.8;margin-bottom:10px}
+    .bio-label{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#aaa;font-weight:700;border-top:1px solid var(--border);padding-top:24px;margin:24px 0 16px;display:block}
+    .assoc-section{padding:80px 0;background:var(--light)}
+    .team-card{text-align:center;margin-bottom:20px}
+    .team-avatar{width:100px;height:100px;border-radius:50%;display:block;margin:0 auto 14px;background:var(--black);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:700;color:#fff}
+    .team-card .t-name{font-size:14px;font-weight:700;color:var(--black);margin-bottom:3px}
+    .team-card .t-role{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#aaa}
+  </style>
+</head>
+<body>
+  <header class="header_area sticky"><nav class="navbar navbar-expand-lg"><div class="container">
+    <a class="navbar-brand" href="index.html"><img class="logo-standard" src="https://calvilloabogados.com/img/logo.png" alt=""/></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+    <div class="collapse navbar-collapse" id="nav"><ul class="nav navbar-nav ml-auto">
+      <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="service.html" data-toggle="dropdown"><span data-i18n="nav_services">Servicios</span></a><div class="dropdown-menu"><a class="dropdown-item" href="service.html#litigio-mercantil" data-i18n="nav_mercantil">Litigio Mercantil</a><a class="dropdown-item" href="service.html#litigio-civil" data-i18n="nav_civil">Litigio Civil</a><a class="dropdown-item" href="service.html#arbitraje" data-i18n="nav_arbitraje">Arbitraje</a><a class="dropdown-item" href="service.html#corporativo" data-i18n="nav_corporativo">Corporativo</a></div></li>
+      <li class="nav-item"><a class="nav-link" href="noticias.html" data-i18n="nav_news">Publicaciones</a></li>
+      <li class="nav-item"><a class="nav-link" href="clientes.html" data-i18n="nav_clients">Clientes</a></li>
+      <li class="nav-item"><a class="nav-link" href="socios.html" data-i18n="nav_team">Equipo</a></li>
+      <li class="nav-item"><a class="nav-link" href="contact.html" data-i18n="nav_contact">Contacto</a></li>
+      <li class="nav-item"><a class="nav-link nav-cta" href="contact.html" data-i18n="nav_cta">Agendar Consulta</a></li>
+    </ul>
+    <button class="lang-toggle" id="lang-toggle" onclick="caSetLang(localStorage.getItem('ca_lang')==='en'?'es':'en')">EN</button>
+    </div>
+  </div></nav></header>
+  <div class="spacer-nav"></div>
+  <div class="banner_area"><div class="banner_inner"><h4 data-i18n="team_banner">Equipo</h4></div></div>
+
+  <!-- FOUNDING PARTNER -->
+  <section class="partner-section">
+    <div class="container">
+      <div class="main_title reveal"><h1 data-i18n="team_h1">Nuestro Equipo</h1><div class="title-rule"></div></div>
+      <div class="reveal">
+        <h2 class="partner-name">Ricardo Calvillo Ortiz</h2>
+        <p class="partner-title" data-i18n="team_partner">Socio Fundador</p>
+        <img class="partner-photo" src="img/ricardo.jpg" alt="Ricardo Calvillo Ortiz"/>
+      </div>
+      <div class="bio-wrap reveal">
+        <p data-i18n="team_bio1">Su práctica profesional se enfoca en litigio civil y mercantil...</p>
+        <ul>
+          <li data-i18n="team_li1"></li>
+          <li data-i18n="team_li2"></li>
+          <li data-i18n="team_li3"></li>
+          <li data-i18n="team_li4"></li>
+          <li data-i18n="team_li5"></li>
+          <li data-i18n="team_li6"></li>
+        </ul>
+        <span class="bio-label" data-i18n="team_edu">Estudios</span>
+        <ul>
+          <li data-i18n="team_edu1"></li>
+          <li data-i18n="team_edu2"></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ASSOCIATES -->
+  <section class="assoc-section">
+    <div class="container">
+      <div class="main_title reveal"><h1 data-i18n="team_assoc_h">Asociados</h1><div class="title-rule"></div></div>
+      <div class="row justify-content-center">
+        <div class="col-6 col-md-3 reveal">
+          <div class="team-card">
+            <div class="team-avatar" style="width:100px;height:100px;border-radius:50%;margin:0 auto 14px;overflow:hidden"><img src="https://ui-avatars.com/api/?name=MF+Reyes&size=100&background=0a0a0a&color=fff&bold=true&font-size=0.35" style="width:100%;height:100%;object-fit:cover" alt=""/></div>
+            <p class="t-name" data-i18n="assoc1_name">María Fernanda Reyes</p>
+            <p class="t-role" data-i18n="assoc1_role">Asociada Senior · Litigio</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 reveal" style="transition-delay:.08s">
+          <div class="team-card">
+            <div style="width:100px;height:100px;border-radius:50%;margin:0 auto 14px;overflow:hidden"><img src="https://ui-avatars.com/api/?name=C+Mendoza&size=100&background=0a0a0a&color=fff&bold=true&font-size=0.35" style="width:100%;height:100%;object-fit:cover" alt=""/></div>
+            <p class="t-name" data-i18n="assoc2_name">Carlos Mendoza</p>
+            <p class="t-role" data-i18n="assoc2_role">Asociado · Corporativo</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 reveal" style="transition-delay:.16s">
+          <div class="team-card">
+            <div style="width:100px;height:100px;border-radius:50%;margin:0 auto 14px;overflow:hidden"><img src="https://ui-avatars.com/api/?name=S+Vargas&size=100&background=0a0a0a&color=fff&bold=true&font-size=0.35" style="width:100%;height:100%;object-fit:cover" alt=""/></div>
+            <p class="t-name" data-i18n="assoc3_name">Sofía Vargas</p>
+            <p class="t-role" data-i18n="assoc3_role">Asociada · Arbitraje</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer-area"><div class="container"><div class="row"><div class="col-lg-4 mb-4"><img class="footer-logo" src="https://calvilloabogados.com/img/logo.png" alt=""/><p class="footer-tagline" data-i18n="footer_tagline"></p></div><div class="col-lg-4 mb-4"><p class="footer-heading" data-i18n="footer_nav">Navegación</p><ul class="footer-links"><li><a href="service.html" data-i18n="nav_services">Servicios</a></li><li><a href="noticias.html" data-i18n="nav_news">Publicaciones</a></li><li><a href="clientes.html" data-i18n="nav_clients">Clientes</a></li><li><a href="socios.html" data-i18n="nav_team">Equipo</a></li><li><a href="contact.html" data-i18n="nav_contact">Contacto</a></li></ul></div><div class="col-lg-4 mb-4"><p class="footer-heading" data-i18n="footer_contact">Contacto</p><div class="footer-contact"><p>Leibnitz 117 - Piso 3<br/>Col. Verónica Anzúrez, CDMX</p><p style="margin-top:10px"><a href="mailto:contacto@calvilloabogados.com">contacto@calvilloabogados.com</a></p></div></div></div></div><div class="footer-bottom"><div class="container"><p>Copyright &copy; <script>document.write(new Date().getFullYear())</script> <span data-i18n="footer_copy"></span></p></div></div></footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/js/bootstrap.bundle.min.js"></script>
+  <script src="i18n.js"></script>
+  <script>const o=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');o.unobserve(x.target)}})},{threshold:.1});document.querySelectorAll('.reveal').forEach(el=>o.observe(el));</script>
+</body></html>
